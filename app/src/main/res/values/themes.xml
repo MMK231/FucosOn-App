@@ -1,0 +1,29 @@
+<!--
+  ~ /*
+  ~  * Copyright (c) 2025 Mohammed Mahmoud
+  ~  *
+  ~  * This file is part of FocusOn project.
+  ~  *
+  ~  * GitHub: https://github.com/MMK231
+  ~  *
+  ~  * All rights reserved. Unauthorized copying of this file,
+  ~  * via any medium is strictly prohibited.
+  ~  */
+  -->
+
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FocusOnApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/gray</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="Theme.FocusOnApp" parent="Base.Theme.FocusOnApp" />
+
+    <style name="CustomFabShape" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="tint">@null</item>
+    </style>
+</resources>

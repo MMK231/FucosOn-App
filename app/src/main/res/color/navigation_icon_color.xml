@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * Copyright (c) 2025 Mohammed Mahmoud
+  ~  *
+  ~  * This file is part of FocusOn project.
+  ~  *
+  ~  * GitHub: https://github.com/MMK231
+  ~  *
+  ~  * All rights reserved. Unauthorized copying of this file,
+  ~  * via any medium is strictly prohibited.
+  ~  */
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/white" android:state_selected="true" />
+    <item android:color="#B9B8CC" android:state_selected="false" />
+    <item android:color="#B9B8CC" />
+</selector>

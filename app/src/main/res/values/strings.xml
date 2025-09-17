@@ -1,0 +1,28 @@
+<!--
+  ~ /*
+  ~  * Copyright (c) 2025 Mohammed Mahmoud
+  ~  *
+  ~  * This file is part of FocusOn project.
+  ~  *
+  ~  * GitHub: https://github.com/MMK231
+  ~  *
+  ~  * All rights reserved. Unauthorized copying of this file,
+  ~  * via any medium is strictly prohibited.
+  ~  */
+  -->
+
+<resources>
+    <string name="app_name">FocusOnApp</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="calender">Calender</string>
+    <string name="add_new_task">Add New Task</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_task">Add Task</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="add">Add</string>
+    <string name="select_date">Select Date</string>
+</resources>
