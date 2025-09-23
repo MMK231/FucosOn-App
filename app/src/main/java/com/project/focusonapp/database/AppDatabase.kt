@@ -22,7 +22,7 @@ import com.project.focusonapp.database.dao.TasksDao
 import com.project.focusonapp.database.model.Task
 
 
-@Database(entities = [Task::class], version = 1, exportSchema = false)
+@Database(entities = [Task::class], version = 2, exportSchema = false)
 @TypeConverters(Converter::class)
 abstract class AppDatabase : RoomDatabase() {
 
@@ -37,8 +37,7 @@ abstract class AppDatabase : RoomDatabase() {
                 db = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java, dbName
-                )
-                    .allowMainThreadQueries()
+                ).allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
                     .build()
             }

@@ -35,6 +35,7 @@
         android:layout_marginTop="23dp">
 
         <EditText
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/title" />
@@ -47,6 +48,7 @@
         android:layout_marginTop="23dp">
 
         <EditText
+            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/description"

@@ -19,7 +19,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Task(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @ColumnInfo
     val id: Int = 0,
     @ColumnInfo

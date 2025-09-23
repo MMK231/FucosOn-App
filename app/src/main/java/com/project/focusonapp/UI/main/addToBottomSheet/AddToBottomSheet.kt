@@ -20,6 +20,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.project.focusonapp.database.AppDatabase
+import com.project.focusonapp.database.model.Task
 import com.project.focusonapp.databinding.AddToBottomSheetBinding
 
 
@@ -29,9 +31,7 @@ class AddToBottomSheet : BottomSheetDialogFragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = AddToBottomSheetBinding.inflate(inflater, container, false)
         setCurrentDate()
@@ -42,8 +42,23 @@ class AddToBottomSheet : BottomSheetDialogFragment() {
         super.onViewCreated(view, savedInstanceState)
         initPicker()
         binding.btnAdd.setOnClickListener {
-            isValidInputs()
+            createTask()
+
         }
+
+    }
+
+
+    private fun createTask() {
+        if (!isValidInputs()) return
+        AppDatabase.createDatabase(requireContext()).tasksDao().createTask(
+            Task(
+                title = binding.titleTextInputLayout.editText?.text.toString(),
+                description = binding.descriptionTextInputLayout.editText?.text.toString(),
+                date = selectedDay.timeInMillis, status = false
+            )
+        )
+        dismiss()
 
     }
 
@@ -56,7 +71,8 @@ class AddToBottomSheet : BottomSheetDialogFragment() {
                     selectedDay.set(Calendar.MONTH, month)
                     selectedDay.set(Calendar.DAY_OF_MONTH, day)
                     updateDate()
-                }, selectedDay.get(Calendar.YEAR),
+                },
+                selectedDay.get(Calendar.YEAR),
                 selectedDay.get(Calendar.MONTH),
                 selectedDay.get(Calendar.DAY_OF_MONTH)
             )
@@ -84,13 +100,13 @@ class AddToBottomSheet : BottomSheetDialogFragment() {
         val title = binding.titleTextInputLayout.editText?.text
         val description = binding.descriptionTextInputLayout.editText?.text
         var isValid = true
-        if (title.isNullOrEmpty()) {
+        if (title.isNullOrBlank()) {
             binding.titleTextInputLayout.error = "Please Enter Valid Title"
             isValid = false
         } else {
             binding.titleTextInputLayout.error = null
         }
-        if (description.isNullOrEmpty()) {
+        if (description.isNullOrBlank()) {
             binding.descriptionTextInputLayout.error = "Please Enter Valid Description"
             isValid = false
         } else {

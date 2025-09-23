@@ -25,4 +25,5 @@
     <string name="title">Title</string>
     <string name="add">Add</string>
     <string name="select_date">Select Date</string>
+    <string name="start_button">start button</string>
 </resources>
