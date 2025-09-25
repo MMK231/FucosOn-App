@@ -21,6 +21,21 @@
 
     <style name="Theme.FocusOnApp" parent="Base.Theme.FocusOnApp" />
 
+    <style name="MyCalendarHeaderText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/white</item> <!-- لون الشهر -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyCalendarWeekDayText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/white</item> <!-- لون الأيام (أسماء) -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialCalendarWidget.Date">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
     <style name="CustomFabShape" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
